@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'patient' => 'রোগী',
+    'title' =>  'সম্মধন',
+    'create_patient' => 'নতুন রোগী যুক্ত করুন',
+    'edit_patient' => 'রোগীর তথ্য সম্পাদন করুন',
+    'view_patient' => 'রোগীর তথ্য দেখুন',
+    'select_patient' => 'রোগী নির্বাচন করুন',
+    'delete_patient' => 'রোগী মুছে ফেলুন',
+    'all_patient' => 'সকল রোগী',
+    'general_info' => 'সাধারন তথ্য',
+    'contact_information' => 'যোগাযোগের তত্যাদি',
+    'address' => 'ঠিকানা',
+    'name' => 'নাম',
+    'code' => 'কোড',
+    'birth_date' => 'জন্মতারিখ',
+    'age' => 'বয়স',
+    'comments' => 'মন্তব্য',
+    'how_did_you_meet' => 'সাক্ষাতের মাধ্যম',
+    'details' => 'ডিটেইলস',
+    'cell_phone' => 'ফোন নাম্বার',
+    'home_phone' => 'হোম নাম্বার',
+    'occupation' => 'পেশা',
+    'zip_code' => 'যিপ কোড',
+    'city' => 'শহর',
+    'state' => 'স্টেট',
+    'country' => 'দেশ',
+    'patient_photo' => 'রোগীর ছবি',
+    'height' => 'উচ্চতা',
+    'weight' => 'ওজন',
+    'sex'   =>  'লিঙ্গ',
+    'contact_email' => 'যোগাযোগের জন্য ই-মেইল',
+    'save_message' => 'রোগী সফল ভাবে যুক্ত করা হয়েছে',
+    'update_message' => 'রোগী সফল ভাবে সম্পাদন করা হয়েছে',
+    'delete_message' => 'রোগী সফল ভাবে মুছেফেলা হয়েছে',
+    'patient_timeline' => 'রোগীর টাইমলাইন'
+]
+
+?>

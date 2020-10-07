@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'patient' => 'मरीज',
+    'title' => 'शीर्षक',
+    'sex' => 'लिंग',
+    'create_patient' => 'रोगी बनाएँ',
+    'edit_patient' => 'रोगी को संपादित करें',
+    'view_patient' => 'रोगी को देखें',
+    'select_patient' => 'रोगी का चयन करें',
+    'delete_patient' => 'रोगी को हटा दें',
+    'all_patient' => 'सभी रोगी',
+    'general_info' => 'सामान्य जानकारी',
+    'contact_information' => 'संपर्क जानकारी',
+    'address' => 'पता',
+    'name' => 'नाम',
+    'code' => 'कोड',
+    'birth_date' => 'जन्म दिन',
+    'age' => 'आयु',
+    'comments' => 'टिप्पणियाँ',
+    'how_did_you_meet' => 'तुम कैसे मिले थे?',
+    'details' => 'विवरण',
+    'cell_phone' => 'सेल फोन',
+    'home_phone' => 'घर का फ़ोन',
+    'occupation' => 'व्यवसाय',
+    'zip_code' => 'पिन कोड',
+    'city' => 'शहर',
+    'state' => 'राज्य',
+    'country' => 'देश',
+    'patient_photo' => 'रोगी की फोटो',
+    'height' => 'ऊंचाई',
+    'weight' => 'वजन',
+    'contact_email' => 'ई - मेल से संपर्क करे',
+    'save_message' => 'रोगी को सफलतापूर्वक बचा लिया गया है',
+    'update_message' => 'रोगी को सफलतापूर्वक अपडेट किया गया है',
+    'delete_message' => 'रोगी को सफलतापूर्वक हटा दिया गया है',
+    'patient_timeline' => 'रोगी की समयरेखा'
+]
+
+?>

@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'patient'           =>  'Geduldig',
+    'title'             =>  'Titel',
+    'sex'               =>  'Sex',
+    'create_patient'    =>  'Patienten anlegen',
+    'edit_patient'      =>  'Patient bearbeiten',
+    'view_patient'      =>  'Patient anzeigen',
+    'select_patient'    =>  'Wählen Sie Patient',
+    'delete_patient'    =>  'Patient löschen',
+    'all_patient'       =>  'Alle Patienten',
+    'general_info'      =>  'Allgemeine Information',
+    'contact_information'=> 'Kontaktinformation',
+    'address'           =>  'Adresse',
+    'name'              =>  'Name',
+    'code'              =>  'Code',
+    'birth_date'        =>  'Geburtstag',
+    'age'               =>  'Alter',
+    'comments'          =>  'Bemerkungen',
+    'how_did_you_meet'  =>  'Wie habt ihr euch getroffen?',
+    'details'           =>  'Einzelheiten',
+    'cell_phone'        =>  'Handy',
+    'home_phone'        =>  'Festnetztelefon',
+    'occupation'        =>  'Besetzung',
+    'zip_code'          =>  'Postleitzahl',
+    'city'              =>  'Stadt',
+    'state'             =>  'Stadt',
+    'country'           =>  'Land',
+    'patient_photo'     =>  'Patientenfoto',
+    'height'            =>  'Höhe',
+    'weight'            =>  'Gewicht',
+    'contact_email'     =>  'Kontakt E-mail',
+    'save_message'      =>  'Der Patient wurde erfolgreich gespeichert',
+    'update_message'    =>  'Der Patient wurde erfolgreich aktualisiert',
+    'delete_message'    =>  'Der Patient wurde erfolgreich gelöscht',
+    'patient_timeline'  =>  'Patientenzeitleiste'
+]
+
+?>

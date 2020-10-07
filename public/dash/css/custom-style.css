@@ -1,0 +1,177 @@
+:root {
+    --color-primary: #2385AA;
+    --color-border: #d4d4d4;
+}
+
+
+.datepicker {
+    z-index: 1050 !important;
+}
+
+.content {
+    padding-top: 27px;
+    padding-left: 20px;
+}
+
+.doc-img {
+    height: 150px;
+    overflow: hidden;
+}
+
+.doc-img img {
+    height: 100%;
+    width: auto;
+}
+
+#loader {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Black background with opacity */
+    z-index: 5000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.border-none {
+    border: none !important;
+}
+
+.invoice-tr-bg {
+    background: #000000;
+    color: #ffffff;
+}
+
+.parsley-errors-list {
+    color: red;
+    list-style: none;
+    margin-left: -37px;
+    margin-bottom: -10px;
+}
+
+.parsley-error, .parsley-error:focus {
+    border-color: red;
+}
+
+.box.box-primary {
+    border-top-color: var(--color-primary);
+}
+
+.box-header.with-border {
+    border: none;
+    margin-top: -29px;
+    margin-left: -25px;
+}
+
+.box-header .box-title {
+    background-color: var(--color-primary);
+    padding: 10px;
+    color: #ffffff;
+    font-weight: 900;
+    border-radius: 4px;
+    font-size: 20px;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    border-bottom: 1px solid #d2d6de;
+}
+
+.header i {
+    margin-right: 10px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.header .header-title {
+    font-size: 24px;
+    line-height: 1px;
+    padding: 0px 0px 7px 7px;
+}
+
+.pagination > .active > span {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.pagination > .active > span:hover {
+    background-color: rgba(255, 69, 0, 0.61);
+    border-color: var(--color-primary);
+}
+
+.bg-custom {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.widget-patient {
+    border: 1px solid #d8d8d8;
+}
+
+.widget-patient-actions {
+    text-align: center;
+    width: 100%;
+    border-radius: 0px !important;
+}
+
+.widget-patient-actions .widget-patient-actions {
+    border-radius: 0px !important;
+}
+
+.card-box {
+    border: 1px solid var(--color-border);
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.card-box .account-status {
+    text-align: center;
+}
+
+.card-box .account-status .ac-active {
+    color: green;
+}
+
+.card-box .account-status .ac-inactive {
+    color: red;
+}
+
+.card-box .card-footer {
+    border-top: 1px solid var(--color-border);
+}
+
+.card-box .card-footer p a {
+    padding: 5px 0px 5px 0px;
+}
+
+.not-found {
+    min-height: 70vh;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.not-found h1 {
+    padding-top: 30vh;
+
+    color: #7a7a7a;
+    text-transform: uppercase;
+}
+
+.not-found a {
+    color: var(--color-primary) !important;
+    font-size: 2rem;
+}

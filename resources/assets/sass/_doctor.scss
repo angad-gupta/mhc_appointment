@@ -1,0 +1,12 @@
+.doctors{
+  padding: 10px;
+  max-height: 50vh;
+  overflow-y: scroll;
+  .doctor-media-list{
+    cursor: pointer;
+    &:nth-child(odd){
+      background-color: #ccc8c8;
+    }
+  }
+}
+

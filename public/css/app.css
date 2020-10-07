@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.prescription .header {
+  height: 60px;
+  background-color: red;
+}
+
+.doctors {
+  padding: 10px;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.doctors .doctor-media-list {
+  cursor: pointer;
+}
+
+.doctors .doctor-media-list:nth-child(odd) {
+  background-color: #ccc8c8;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+

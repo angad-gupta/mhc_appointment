@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'patient'           =>  'Paciente',
+    'title'             =>  'Título',
+    'sex'               =>  'Sexo',
+    'create_patient'    =>  'Crear paciente',
+    'edit_patient'      =>  'Editar paciente',
+    'view_patient'      =>  'Ver paciente',
+    'select_patient'    =>  'Seleccionar paciente',
+    'delete_patient'    =>  'Eliminar paciente',
+    'all_patient'       =>  'Todos los pacientes',
+    'general_info'      =>  'Información general',
+    'contact_information'=> 'Información del contacto',
+    'address'           =>  'Dirección',
+    'name'              =>  'Nombre',
+    'code'              =>  'Código',
+    'birth_date'        =>  'Fecha de nacimiento',
+    'age'               =>  'Años',
+    'comments'          =>  'Comentarios',
+    'how_did_you_meet'  =>  'Cómo conociste?',
+    'details'           =>  'Detalles',
+    'cell_phone'        =>  'Teléfono móvil',
+    'home_phone'        =>  'Teléfono de casa',
+    'occupation'        =>  'Ocupación',
+    'zip_code'          =>  'Código postal',
+    'city'              =>  'Ciudad',
+    'state'             =>  'Estado',
+    'country'           =>  'País',
+    'patient_photo'     =>  'Foto del paciente',
+    'height'            =>  'Altura',
+    'weight'            =>  'Weight',
+    'contact_email'     =>  'Email de contacto',
+    'save_message'      =>  'El paciente se ha guardado correctamente',
+    'update_message'    =>  'El paciente ha sido actualizado exitosamente',
+    'delete_message'    =>  'El paciente ha sido eliminado exitosamente',
+    'patient_timeline'  =>  'Cronología del paciente'
+]
+
+?>
