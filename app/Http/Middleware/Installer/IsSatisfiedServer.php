@@ -16,11 +16,11 @@ class IsSatisfiedServer
     public function handle($request, Closure $next)
     {
         $server_requirement_satisfy = true;
-        foreach (config('installer.requirements') as $requirement) {
-            if (!extension_loaded($requirement)) {
-                return redirect()->to('/install');
-            }
-        }
+        // foreach (config('installer.requirements') as $requirement) {
+        //     if (!extension_loaded($requirement)) {
+        //         return redirect()->to('/install');
+        //     }
+        // }
         return $next($request);
     }
 }

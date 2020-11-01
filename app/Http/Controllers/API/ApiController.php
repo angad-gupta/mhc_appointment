@@ -302,6 +302,7 @@ class ApiController extends Controller
         return response()->json(['status' => 'success','message' => 'Appointment created proceed with the payment to verify']);
     }
 
+
     public function Search(Request $request)
     {
         
@@ -313,7 +314,16 @@ class ApiController extends Controller
 
         if ($request->query('department') != '') {
             $department = Department::where('slug',$request->query('department'))->first();
-            $doctors->where('department_id', $department->id);
+            if($department)
+            {
+                $doctors->where('department_id', $department->id);
+            }
+            else{
+                $data['success'] = false;
+                $data['message'] = 'Department Not found';
+                return response()->json($data,422);
+            }
+            
 
         }
         return response()->json($doctors->paginate(12));

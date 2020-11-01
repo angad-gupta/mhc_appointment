@@ -15,11 +15,11 @@ class IsInstalled
      */
     public function handle($request, Closure $next)
     {
-        if (config('installer.steps.finish') == 0) {
-            return redirect()->to('/install');
-        } else {
+        // if (config('installer.steps.finish') == 0) {
+        //     return redirect()->to('/install');
+        // } else {
             return $next($request);
-        }
+        //}
 
     }
 }

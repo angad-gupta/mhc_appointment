@@ -17,6 +17,7 @@ class DoctorResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
+            'doctor-slug' => $this->slug,
             'full_name' => $this->full_name,
             'links' => [
                 'self' => route("api.doctors",$this->slug),

@@ -13,7 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-    Route::middleware('auth:api')->get('/user', function (Request $request) {
+    Route::middleware('patient_only_api')->get('/user', function (Request $request) {
+        dd($request->user());
         return $request->user();
     });
     
@@ -27,7 +28,7 @@ use Illuminate\Http\Request;
     Route::get('doctor/{slug}', 'API\ApiController@Doctor')->name('api.doctors');    
     Route::get('get/doctor/schedule','API\ApiController@DoctorSchedule')->name('api.get_schedule');
     Route::get('booking','API\ApiController@Booking')->name('api.booking');
-     Route::middleware('auth:api', 'active.user', 'patient.only')->group(function () {
+     Route::middleware('patient_only_api')->group(function () {
         Route::get('check_if_video_active','API\ApiController@CheckIfVideoActive')->name('api.check_if_video_active');
         //booking and payment verification api
         Route::post('book/appointment','API\ApiController@PayNow')->name('api.book_now');

@@ -14,6 +14,7 @@ use App\Http\Middleware\RedirectIfNotActive;
 use App\Http\Middleware\RedirectIfPatient;
 use App\Http\Middleware\SuperAdminOnly;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use App\Http\Middleware\PatientOnlyApi;
 
 class Kernel extends HttpKernel
 {
@@ -81,5 +82,6 @@ class Kernel extends HttpKernel
         'redirect.if.install' => RedirectIfInstall::class,
         'localization'  =>  Localization::class,
         'video_call_on' => CheckActiveVideo::class,
+        'patient_only_api' => PatientOnlyApi::class,
     ];
 }
