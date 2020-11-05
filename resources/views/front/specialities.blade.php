@@ -4,7 +4,7 @@
 {{ __('website.nav.home') }}
 @endsection
 @section("content")
-<section class="g-bg-gray-light-v5 g-py-50" style="background-image: url({{asset('front/assets/img/bg/pattern2.png')}});">
+<section class="g-bg-gray-light-v5 g-py-50" style="background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg);">
   <div class="container">
     <div class="d-sm-flex text-center">
       <div class="align-self-center">

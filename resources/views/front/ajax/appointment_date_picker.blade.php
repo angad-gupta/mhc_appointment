@@ -19,10 +19,10 @@
             <h4 class="h5 g-font-weight-700 g-mb-3 doc-pop-up-name">{{$doctor->title}} {{$doctor->full_name}}
                  {!!$video ? '<i class="fa fa-phone" aria-hidden="true"></i>':''!!}
             </h4>
-            <em
-                class="d-block g-color-gray-dark-v5 g-font-style-normal g-font-size-13 ">{{ $doctor->department->title }}</em>
-            <span style="font-size:12px;">
-                <i class="icon-check g-pos-rel g-top-1 g-color-gray-dark-v5 g-mr-5"></i> Medical Registration Verified
+            <h4 class="g-font-style-normal g-font-size-13 u-label g-bg-primary g-rounded-3"><i class="icon-badge g-pos-rel g-top-1 g-mr-5"></i> {{ $doctor->department->title }}</h4>
+            <br>
+            <span style="font-size:12px;color: green !important">
+                <i class="icon-check g-pos-rel g-top-1 g-mr-0"></i> Medical Registration Verified
             </span>
             @if($video)
                 @if($doctor->video_consultation_fee)
@@ -43,24 +43,24 @@
     </div>
 </div>
 <div class="row">    
-    <div class="form-group align-self-center g-mt-25 col-md-6" style="
-    width: 60%; margin-bottom: -7%;">
+    <div class="form-group align-self-center g-mt-25 col-md-12" style="">
         {{-- <input class="form-control align-self-center rounded-50 form-control-md" id="schedule-date-range"> --}}
-        <div class="form-group g-mb-50">
-            <label class="g-mb-10">Select appointment date</label>
+        <div class="form-group g-mb-0">
+            {{-- <label class="g-mb-10">Select Appointment Date</label> --}}
+            <p><b>Clickable</b> Dates denotes <b>Doctor's Avaibility.</b></p>
             <div id="datepickerInline" class="u-datepicker-v1 g-brd-gray-light-v2"></div>
         </div>
         <input type="hidden" name="doctor_id" id="doctor_id" value="{{$doctor->id}}">
     </div>
-    <div class="col-md-6 mt-5">        
+    <div class="col-md-12 mt-1">        
         <div class="text-center appointment-loader" style="font-size:45px;" hidden="">
             <i class="fa fa-cog fa-spin"></i>
         </div>
         <div class="time-message"> 
-            <p>Clickable dates denotes doctor is avaibale.</p>
-            <p style="margin-top: 80px"><b>Please select the date from calendar to see the time schedule.</b></p>
+           
+            <p style="margin-top: 0px;font-style:italic;">* Please select the date from calendar to see the time schedule.</p>
         </div>
-        <div class="schedule-time g-mt-30" hidden="hidden"></div>
+        <div class="schedule-time g-mt-10" hidden="hidden"></div>
         {{-- <div style="margin-top: 210px; margin-left: 300px;">
             <button type="button" class="btn btn-primary confirm-btn" disabled="true">Confirm</button>
         </div> --}}

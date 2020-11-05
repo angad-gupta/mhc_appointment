@@ -1,11 +1,16 @@
 @if($schedule_count > 0)
-  <div style="margin-top: -40px;">
-    <p style="font-size: 20px"><i class="fa fa-calendar-times-o" aria-hidden="true"></i>  Pick a time</p>
+
+  <div class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15" style="border-radius: 10px;">
+    <h3 class="h6 mb-0" >
+        <i class="icon-clock g-pos-rel g-top-1 g-mr-5"></i> Pick Time
+      </h3>
   </div>
 @if(count($morning) > 0)
 <div class="row">
-    <div class="col-md-4">
-      <h3 class="h5 g-font-weight-300"><i class="fa fa-sun-o"></i> Morning</h3>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+      <h3 class="h5 g-font-weight-300">
+        <i class="icon-weather-023 u-line-icon-pro" style="color:orange"></i> Morning
+      </h3>
     </div>
   
   <?php
@@ -17,7 +22,7 @@
       $video = false;
     }
   ?>
-  <div class="col-md-8">
+  <div class="col-md-8 col-sm-8 col-xs-8">
     <div id="shortcode1">
       <div class="shortcode-html">
         <!-- Simple Plain -->
@@ -40,7 +45,7 @@
 <div class="row">
   @if ($noon)
     <div class="col-md-4">
-      <h3 class="h5 g-font-weight-300"><i class="fa fa-moon-o"></i> Afternoon</h3>
+      <h3 class="h5 g-font-weight-300"><i class="icon-weather-025 u-line-icon-pro" style="color: coral"></i> Afternoon</h3>
     </div>
   @endif
   
@@ -68,7 +73,7 @@
 <div class="row"> 
 
   <div class="col-md-4">
-    <h3 class="h5 g-font-weight-300"><i class="fa fa-moon-o"></i> Evening</h3>
+    <h3 class="h5 g-font-weight-300"><i class="icon-weather-021 u-line-icon-pro" style="color:skyblue"></i> Evening</h3>
   </div>
 
   <div class="col-md-8">
@@ -96,7 +101,7 @@
 @endif
 
 <div>
-  <button type="button" class="btn btn-primary confirm-btn" disabled="true">Confirm</button>
+  <button type="button" class="btn btn-primary confirm-btn btn-block g-py-10 " disabled="true">Confirm</button>
 </div>
 
 {{-- <script src="{{ asset('web/jquery-3.4.1.min.js') }}"></script> --}}

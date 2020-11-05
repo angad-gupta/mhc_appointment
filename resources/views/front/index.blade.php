@@ -5,7 +5,23 @@
 @endsection
 @section('content')
 <!-- Intro section -->
-<section class="g-py-30 g-mb-50">
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+	<!-- Parallax Image -->
+	<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_4--after" style="height: 140%; background-image: url(https://www.clinicone.com.np/wp-content/uploads/2020/08/Untitled-design.png);"></div>
+	<!-- End Parallax Image -->
+  
+	<div class="container text-center g-color-white g-py-200--md g-py-80">
+	  <h2 class="text-uppercase g-font-weight-700 g-mb-20" style=" text-shadow: 1px 6px 11px black;">Introducing Video Consultations</h2>
+  
+	  <p class="lead g-px-100--md g-mb-40" style=" text-shadow: 1px 6px 11px black;">Don’t delay your health concerns.</p>
+  
+	  <a href="{{ route('w.doctors') }}" class="btn btn-xl u-btn-orange text-uppercase g-font-weight-600 g-font-size-12 g-rounded-50 g-mb-15 g-mr-30--md u-block-hover u-block-hover__additional--jump u-shadow-v21"><i class="icon-science-033 u-line-icon-pro"></i> Find doctors</a>
+	  {{-- <div class="g-hidden-md-up"></div> --}}
+	  <a href="{{route('specialities')}}" class="btn btn-xl u-btn-pink text-uppercase g-font-weight-600 g-font-size-12 g-rounded-50 g-mb-15 u-block-hover u-block-hover__additional--jump u-shadow-v21"><i class="icon-science-032 u-line-icon-pro"></i> Specialities</a>
+	</div>
+  </section>
+
+{{-- <section class="g-py-30 g-mb-50">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-lg-5 intro-div">
@@ -53,14 +69,14 @@
 				</div>
 			</div>
 		</div>
-</section>
+</section> --}}
 <!-- Speciality start -->
  <div class="container g-pt-30 g-pos-rel g-z-index-1 g-mb-90" id="filter_div">
  <div class="row mx-5 mb-3">
 			<div class="col-12">
-				<div class="u-heading-v2-1--bottom g-mb-30">
+				<div class="u-heading-v2-1--bottom g-mb-0 text-center">
 					<h2 class="u-heading-v2__title g-mb-10 text-uppercase g-color-primary g-font-weight-600">Search Doctors</h2>
-					<h4 class="g-font-weight-200">Find experience doctors for your problem</h4>
+					<h4 class="g-font-weight-200 g-font-size-16">Find experience doctors for your problem</h4>
 				</div>
 			</div>
 		</div>
@@ -68,9 +84,10 @@
         <form method="GET" action="{{route('w.doctors')}}">
              <div class="row justify-content-center">
                <div class="col-sm-4 col-lg-3 g-mb-30">
-              <!-- Button Group -->
+			  <!-- Button Group -->
+			  <label>Select Department</label>
               <select class="js-custom-select w-100 u-select-v1 g-brd-gray-light-v3 g-color-black g-color-primary--hover g-bg-white g-py-12" name="department" data-placeholder="Department" data-open-icon="fa fa-angle-down" data-close-icon="fa fa-angle-up">
-                <option></option>
+             
                @foreach($specialities as $d)
                   <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="{{$d->slug}}">{{$d->title}}</option>
                 @endforeach
@@ -78,9 +95,10 @@
               <!-- End Button Group -->
             </div>
             <div class="col-sm-4 col-lg-3 g-mb-30">
-              <!-- Button Group -->
+			  <!-- Button Group -->
+			  <label>Select Gender</label>
               <select class="js-custom-select w-100 u-select-v1 g-brd-gray-light-v3 g-color-black g-color-primary--hover g-bg-white g-py-12" name="gender" data-placeholder="Gender" data-open-icon="fa fa-angle-down" data-close-icon="fa fa-angle-up">
-				<option></option>
+			
                 <option  class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="Any">Any</option>
                 <option  class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="Male">Male</option>
                 <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="Female">Female</option>
@@ -90,15 +108,16 @@
             </div>
 
             <div class="col-sm-4 col-lg-3 g-mb-30">
-              <!-- Button Group -->
+			  <!-- Button Group -->
+			  <label>Select Fees</label>
               <select class="js-custom-select w-100 u-select-v1 g-brd-gray-light-v3 g-color-black g-color-primary--hover g-bg-white g-py-12" name="consultation_fee" data-placeholder="Consultation Fee" data-open-icon="fa fa-angle-down" data-close-icon="fa fa-angle-up">
-                <option></option>
+				<option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="Any">Any</option>
                 <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="free">Free</option>
                 <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="300">NPR.1-300</option>
                 <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="500">NPR.300-500</option>
                 <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="1000">NPR.500-1000</option>
 				<option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="1000+">NPR.1000+</option>
-                <option class="g-brd-none g-color-black g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" value="Any">Any</option>
+
               </select>
               <!-- End Button Group -->
             </div>
@@ -120,14 +139,14 @@
       </div>
 <section>
 	<div class="container">
-		<div class="row mt-20">
-			<div class="row mx-5 mb-3">
-				<div class="col-12">
-					<div class="u-heading-v2-1--bottom g-mb-30">
+		<div class=" mt-20">
+			<div class=" mb-3">
+				
+					<div class="u-heading-v2-1--bottom g-mb-0 text-center">
 						<h2 class="u-heading-v2__title g-mb-10 text-uppercase g-color-primary g-font-weight-600"> Consult top doctors online for any health concern</h2>
-						<h4 class="g-font-weight-200">Private online consultations with verified doctors in all specialists</h4>
+						<h4 class="g-font-weight-200 g-font-size-16">Private online consultations with verified doctors in all specialists</h4>
 					</div>
-				</div>
+			
 			</div>
 		</div>
 		<!-- Team Block -->
@@ -247,14 +266,12 @@
 <section>
 	<div class="container g-pt-30">
 		<!-- Title -->
-		<div class="row mx-5 mb-3">
-			<div class="col-12">
-				<div class="u-heading-v2-1--bottom g-mb-30">
+	
+				<div class="u-heading-v2-1--bottom g-mb-0 text-center">
 					<h2 class="u-heading-v2__title g-mb-10 text-uppercase g-color-primary g-font-weight-600">FEATURED DOCTOR</h2>
-					<h4 class="g-font-weight-200">Find experience doctors for your problem</h4>
+					<h4 class="g-font-weight-200 g-font-size-16">Find experience doctors for your problem</h4>
 				</div>
-			</div>
-		</div>
+			
 		<!-- End title -->
 		<!-- Doctor row start -->
 		<div class="row mx-5">
@@ -267,8 +284,9 @@
 
 					<div class="media-body align-self-center" style="cursor:pointer;">
 						<h4 class="h5 g-font-weight-700 g-mb-3">{{ $doctor->title }} {{ str_limit($doctor->full_name,15,'...') }}</h4>
-						<em class="d-block g-color-gray-dark-v5 g-font-style-normal g-font-size-13">{{ $doctor->department->title }}</em>
-						<i class="icon-check g-pos-rel g-top-1 g-color-gray-dark-v5 g-mr-5"></i> Verified
+						<em class=" g-font-style-normal g-font-size-13 u-label g-bg-primary g-rounded-3"><i class="icon-badge g-pos-rel g-top-1 g-mr-5"></i> {{ $doctor->department->title }}</em>
+						<br>
+						<span style="color:green"><i class="icon-check g-pos-rel g-top-1 g-mr-5"></i> Verified</span>
 					</div>
 					
 				</div>

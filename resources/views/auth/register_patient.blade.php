@@ -18,11 +18,25 @@
 </style>
 <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
       <!-- Parallax Image -->
-      <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-size-cover g-bg-bluegray-opacity-0_3--after" style="height: 140%; background-image: url(front/assets/img-temp/1920x1080/img2.jpg&quot;); transform: translate3d(0px, -214.427px, 0px);"></div>
+      <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-size-cover g-bg-bluegray-opacity-0_3--after" style="height: 140%; background-image: url(https://images.unsplash.com/photo-1507646278763-8b57d6bf6369?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); transform: translate3d(0px, -214.427px, 0px);"></div>
       <!-- End Parallax Image -->
 
       <div class="container g-pt-30 g-pb-20">
         <div class="row justify-content-between">
+          <div class="col-md-4 flex-md-first align-self-center g-mb-10">
+            <div class="mb-5">
+              <h1 class="h3 g-color-white g-font-weight-600 mb-3">MEROHEALTHCARE,<br>Online Doctor Video Consulation!</h1>
+              <p class="g-color-white-opacity-0_8 g-font-size-12 text-uppercase">Nepal's growing online healthcare partner</p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-11 col-lg-9">
+                
+               
+                <!-- End Testimonials -->
+              </div>
+            </div>
+          </div>
           <div class="col-md-8 col-lg-8 flex-md-unordered align-self-center g-mb-80">
             <div class="g-bg-white rounded g-pa-50">
               <header class="text-center mb-4">
@@ -125,10 +139,11 @@
                     </div>
 
                   </div>
- 
+                  <hr>
+                  <h3 class="h5 text-center">OR,</h3>
                   <div class="login-social-btn-area text-center">
-                    <div class="row">
-                      <a href="{{route('social-provider','facebook')}}" class="btn fb-btn btn-block"><i class="fa fa-facebook"></i> &nbsp;<span>Login With Facebook</span></a>
+                    <div class="">
+                      <a href="{{route('social-provider','facebook')}}" class="btn fb-btn "><i class="fa fa-facebook"></i> &nbsp;<span>Login With Facebook</span></a>
                     </div>   
                     <div class="row">
                       {{-- <a href="{{route('social-provider','google')}}" class="btn google-btn btn-block"><i class="fa fa-google"></i> &nbsp;<span>Login With Google</span></a> --}}
@@ -142,53 +157,7 @@
               </footer>
             </div>
           </div>
-          <div class="col-md-4 flex-md-first align-self-center g-mb-80">
-            <div class="mb-5">
-              <h1 class="h3 g-color-white g-font-weight-600 mb-3">Profitable contracts,<br>invoices &amp; payments for the best cases!</h1>
-              <p class="g-color-white-opacity-0_8 g-font-size-12 text-uppercase">Trusted by 31,000+ users globally</p>
-            </div>
-
-            <div class="row">
-              <div class="col-md-11 col-lg-9">
-                <!-- Icon Blocks -->
-                <div class="media mb-4">
-                  <div class="d-flex mr-4">
-                    <span class="align-self-center u-icon-v1 u-icon-size--lg g-color-primary">
-                      <i class="icon-finance-168 u-line-icon-pro"></i>
-                    </span>
-                  </div>
-                  <div class="media-body align-self-center">
-                    <p class="g-color-white mb-0">Reliable contracts, multifanctionality &amp; best usage of Unify template</p>
-                  </div>
-                </div>
-                <!-- End Icon Blocks -->
-
-                <!-- Icon Blocks -->
-                <div class="media mb-5">
-                  <div class="d-flex mr-4">
-                    <span class="align-self-center u-icon-v1 u-icon-size--lg g-color-primary">
-                      <i class="icon-finance-193 u-line-icon-pro"></i>
-                    </span>
-                  </div>
-                  <div class="media-body align-self-center">
-                    <p class="g-color-white mb-0">Secure &amp; integrated options to create individual &amp; business websites</p>
-                  </div>
-                </div>
-                <!-- End Icon Blocks -->
-
-                <!-- Testimonials -->
-                <blockquote class="u-blockquote-v1 g-color-main rounded g-pl-60 g-pr-30 g-py-25 g-mb-40">Look no further you came to the right place. Unify offers everything you have dreamed of in one package.</blockquote>
-                <div class="media">
-                  <img class="d-flex align-self-center rounded-circle g-width-40 g-height-40 mr-3" src="../../assets/img-temp/100x100/img12.jpg" alt="Image Description">
-                  <div class="media-body align-self-center">
-                    <h4 class="h6 g-color-primary g-font-weight-600 g-mb-0">Alex Pottorf</h4>
-                    <em class="g-color-white g-font-style-normal g-font-size-12">Web Developer</em>
-                  </div>
-                </div>
-                <!-- End Testimonials -->
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

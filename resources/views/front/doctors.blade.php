@@ -9,12 +9,14 @@
 @endsection
 
 @section('content')
-<section class="g-pt-50 g-pb-90">
+
+
+<section class="g-pt-50 g-pb-90" >
     <div class="container">
         <div class="row">
           <div class="col-lg-7">
             <!-- User Block -->
-            <div class="g-brd-around g-brd-gray-light-v4 g-pa-20 g-mb-40">
+            <div class="g-brd-around g-brd-gray-light-v4 g-pa-20 g-mb-40" style="border-radius: 10px;">
               <div class="row">
                 <div class="col">
                   <!-- User Details -->
@@ -27,7 +29,7 @@
 
                   <!-- User Position -->
                     <h4 class="h6 g-font-weight-300 g-mb-10">
-                      <i class="icon-badge g-pos-rel g-top-1 g-mr-5 g-color-gray-dark-v5"></i> {{ $doctor->department->title }}
+                      <span class="u-label g-bg-primary g-rounded-3"><i class="icon-badge g-pos-rel g-top-1 g-mr-5"></i> {{ $doctor->department->title }}</span>
                     </h4>
                   <!-- End User Position -->
                   
@@ -35,22 +37,22 @@
                   <!-- User Info -->
                   <ul class="list-inline g-font-weight-300">
                     @if($doctor->doctor_status == 'approved')
-                    <li class="list-inline-item g-mr-20">
-                      <i class="icon-check g-pos-rel g-top-1 g-color-gray-dark-v5 g-mr-5"></i> Verified User
+                    <li class="list-inline-item g-mr-20" style="color: green">
+                      <i class="icon-check g-pos-rel g-top-1 g-mr-5"></i> Verified Doctor
                     </li>
                     @endif
                     @if($doctor->video_consultation_fee)
-                    <li class="list-inline-item g-mr-20">
-                      <i class="fa fa-money g-pos-rel g-top-1 g-color-gray-dark-v5 g-mr-5"></i>NPR. {{$doctor->video_consultation_fee}}
+                    <li class="list-inline-item g-mr-20" style="color: #2383aa;">
+                      <i class="fa fa-money g-pos-rel g-top-1 g-mr-5"></i>NPR. {{$doctor->video_consultation_fee}}
                     </li>
                     @else
-                    <li class="list-inline-item g-mr-20">
-                      <i class="fa fa-money g-pos-rel g-top-1 g-color-gray-dark-v5 g-mr-5"></i>NPR. 300
+                    <li class="list-inline-item g-mr-20" style="color: #2383aa;"> 
+                      <i class="fa fa-money g-pos-rel g-top-1 g-mr-5"></i>NPR. 300
                     </li>
                     @endif
                     @if($doctor->experience)
-                    <li class="list-inline-item g-mr-20">
-                      {{$doctor->experience}} years experience
+                    <li class="list-inline-item g-mr-20" style="color: #e81c62">
+                      <i class="fa fa-history"></i> {{$doctor->experience}} years experience
                     </li>
                     @endif
                   </ul>
@@ -118,8 +120,8 @@
         <div class="col-lg-5">
         <div class="card border-0 rounded-0 g-mb-50">
               <!-- Panel Header -->
-              <div class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
-                <h3 class="h6 mb-0">
+              <div class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15" style="border-radius: 10px;">
+                <h3 class="h6 mb-0" >
                     <i class="icon-layers g-pos-rel g-top-1 g-mr-5"></i> Appointment Time
                   </h3>
               </div>

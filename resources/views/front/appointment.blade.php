@@ -5,6 +5,28 @@
 @endsection
 @section('content')
 
+<section class="g-bg-gray-light-v5 g-py-50" style="background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg);">
+  <div class="container">
+    <div class="d-sm-flex text-center">
+      <div class="align-self-center">
+        <h2 class="h3 g-font-weight-300 w-100 g-mb-10 g-mb-0--md">Doctors</h2>
+      </div>
+
+      <div class="align-self-center ml-auto">
+        <ul class="u-list-inline">
+          <li class="list-inline-item g-mr-5">
+            <a class="u-link-v5 g-color-main" href="{{URL::to('/')}}">Home</a>
+            <i class="g-color-gray-light-v2 g-ml-5">/</i>
+          </li>
+          <li class="list-inline-item g-color-primary">
+            <span>Doctors</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="g-pt-50 g-pb-90">
   <div class="container">
     <div class="row">
@@ -128,12 +150,12 @@
         @if($doctors->total() > 0)
         <div class="row">
           @foreach($doctors as $doctor)
-              <div class="col-lg-6 g-mb-30">
+              <div class="col-lg-4 col-sm-6 col-xs-6 g-mb-30">
                 <!-- Search Result -->
-                <article class="g-pa-25 u-shadow-v11 rounded" style="min-height:300px; background-color: #d2d0d0;">
+                <article class="g-pa-25 u-block-hover u-block-hover__additional--jump u-shadow-v21 rounded" style="min-height:300px; background-color: white;">
                   <h2 class="h4 g-mb-15">
                     <div class="row">
-                      <i class="icon-check g-pos-rel g-top-1" style="text-shadow: -1px 0 	#228B22, 0 1px 		#228B22, 1px 0 		#228B22, 0 -1px		#228B22; color: 	#228B22; margin-left:90%"></i>
+                      <i class="icon-check g-pos-rel g-top-1" style=" color: 	#228B22; margin-left:90%"></i>
                     </div>
                     <div class="row">                     
                       <img class="g-height-150 g-width-150 rounded-circle mx-auto"
@@ -141,18 +163,21 @@
                       alt="{{ $doctor->title }} {{ $doctor->full_name }}">
                     </div>
                     <div class="row">
-                      <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover mx-auto" href="{{route('w.doctor.details',$doctor->slug)}}" title="{{ $doctor->title}} {{ $doctor->full_name }}">
-                        <p>{{ $doctor->title }}. {{ $doctor->full_name }}</p>
+                      <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover mx-auto g-font-size-14" href="{{route('w.doctor.details',$doctor->slug)}}" title="{{ $doctor->title}} {{ $doctor->full_name }}">
+                        {{ $doctor->title }} {{ $doctor->full_name }}
                       </a>
                     </div>
                     {{-- <ul class="text-center list-inline d-flex justify-content-between g-mb-5">
                       <li class="list-inline-item g-mr-20"> --}}
-                        <p class="text-center u-link-v5 g-color-main g-font-size-14 g-color-primary--hover"
+                        <div class="text-center">
+                        <p class="text-center u-link-v5 g-color-white g-font-size-12 u-label g-bg-primary g-rounded-3"
                           id="doc-department-{{$doctor->id}}" href="#!"
-                          title="{{ $doctor->department->title }}">{{ $doctor->department->title }}</p>
+                          title="{{ $doctor->department->title }}"><i class="icon-badge g-pos-rel g-top-1 g-mr-5"></i> {{ $doctor->department->title }}</p>
+                        </div>
                       {{-- </li>
                     </ul> --}}
-                    <h4 class="text-center h6 g-font-weight-300">
+                    
+                    <h4 class="text-center g-font-weight-700" style="font-size:14px;">
                       @if($doctor->video_consultation_fee)
                         NPR. {{$doctor->video_consultation_fee}} per Appointment
                       @else
@@ -160,7 +185,7 @@
                       @endif
                     </h4>
                   </h2>
-                  <hr style="border-top: 2px solid;">
+                  <hr >
                   @if($doctor->services)
                   <?php
                     $services = explode(',',$doctor->services);
@@ -180,8 +205,8 @@
                   @endif
     
                   @if($doctor->experience)
-                  <h4 class="h6 g-font-weight-300" style="margin-top: -15px; margin-bottom: -30px;">
-                    {{-- <i class="fa fa-history g-pos-rel g-top-1 g-mr-5 g-color-gray-dark-v5"></i>  --}}
+                  <h4 class="h6 g-font-weight-400 text-center" style="margin-top: -15px; margin-bottom: -30px;font-size:12px;color:#e81c62">
+                    <i class="fa fa-history g-pos-rel g-top-1 g-mr-5 g-color-gray-dark-v5"></i> 
                           {{$doctor->experience}} years experience overall 
                   </h4>
                   @else
@@ -196,40 +221,40 @@
                   @endif
                   {{-- <div class="media row" style="margin-left: 16px; margin-top: 40px;"> --}}
                     <div class="row"  style="margin-left: 1px; margin-top: 35px;">
-                      <div class="d-flex g-mr-10">
-                        <span class="u-icon-v3 u-icon-size--xs g-bg-purple g-color-white g-rounded-50x">
+                      <div class="d-flex g-mr-2">
+                        <span class="u-icon-v3 u-icon-size--xs g-bg-teal g-color-white g-rounded-50x">
                           <i class="fa fa-calendar-check-o"></i>
                         </span>
                       </div>
                       @if(availableToday($doctor->id))
                       <div class="media-body">
-                        <p class="m-1"><strong>Available Today</strong></p>
+                        <p class="m-1" style="color: green; font-size:12px;font-weight:600;">Available Today</p>
                       </div>
                       @elseif(availableTomorrow($doctor->id))
                       <div class="media-body">
-                        <p class="m-1"><strong>Available Tomorrow</strong></p>
+                        <p class="m-1" style="color: #2385aa;font-size:12px;font-weight:600;">Available Tomorrow</p>
                       </div>
                       @elseif(availableSevenDays($doctor->id))
                       <div class="media-body">
-                        <p class="m-1"><strong>Available within next 7 days</strong></p>
+                        <p class="m-1" style="color: coral;font-size:12px;font-weight:600;">Available within next 7 days</p>
                       </div>
                       @else
                       <div class="media-body">
-                        <p class="m-1"><strong>Not Available for next 7 days</strong></p>
+                        <p class="m-1" style="color: red;font-size:12px;font-weight:600;">Not Available for next 7 days</p>
                       </div>
                       @endif
                     </div>
                     <div class="row" style="margin-left: 3px; margin-bottom: 10px; width: 96%; margin-top: 10px;">
-                      <a class="btn btn-block g-bg-purple left" href="{{route('w.doctor.details',$doctor->slug)}}">
-                        <span style="color: #f7f7f7; font-weight: 100%;">View Profile</span> 
+                      <a class="btn btn-block u-btn-orange left" href="{{route('w.doctor.details',$doctor->slug)}}" style="font-size:12px;">
+                        <span style="color: #f7f7f7; font-weight: 100%;"><i class="icon-notebook"></i> View Profile</span> 
                       </a>
                     </div>
                     <div class="row" style="margin-left: 3px;
                     margin-bottom: 10px;
                     width: 96%;
                     margin-top: 10px;">
-                      <a class="btn btn-block g-bg-purple video-consultation" data-toggle="modal" cid="{{$doctor->id}}" data-target="#exampleModal"href="#!">
-                        <i class="fa fa-video-camera g-pos-rel g-top-1 g-mr-5"></i><span style="color: #f7f7f7; font-weight: 100%;">Book Video Consultation</span>
+                      <a class="btn btn-block u-btn-teal video-consultation" data-toggle="modal" cid="{{$doctor->id}}" data-target="#exampleModal" href="#!" style="font-size:12px;">
+                        <span style="color: #f7f7f7; "> <i class="icon-camrecorder"></i> Book Video Consultation</span>
                       </a>
                     </div>
                   {{-- </div>               --}}
@@ -263,7 +288,10 @@
 
         @else
         <div class="row justify-content-center ">
-          <h2>No Doctors found</h2>
+          <div class="text-center">
+            <h2 class="h1 g-color-black g-font-weight-600 mb-2"><i class="icon-exclamation"></i> Sorry</h2>
+            <p class="lead mb-5"> No Doctor Found !</p>
+          </div>
         </div>
         @endif
       </div>

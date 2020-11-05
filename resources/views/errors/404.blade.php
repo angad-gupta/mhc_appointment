@@ -1,7 +1,5 @@
 @extends('front.components.app')
 
-
-
 @section('title') {{ __('website.error_page.titles.not_found') }} @endsection
 
 @section('content')

@@ -23,24 +23,24 @@
         <!-- Navigation -->
         <div class="collapse navbar-collapse align-items-center flex-sm-row g-mr-40--lg" id="navBar">
           <ul class="navbar-nav g-pos-rel g-font-weight-600 mr-auto">
-            <li class="nav-item nav-item-hover g-mx-5--lg g-mx-5--xl {{Request::routeIs('/') ? 'active' : ''}}">
+            <li class="nav-item g-mx-5--lg g-mx-5--xl {{Request::routeIs('/') ? 'active' : ''}}">
               <a href="{{route('/')}}" class="nav-link">
                 <div class="g-py-2 g-px-0 nav-item-child">Home</div>
-                <div class="header-menu-summary">Check whats new</div>
+                {{-- <div class="header-menu-summary">Check whats new</div> --}}
               </a>
             </li>
-            <li class="nav-item nav-item-hover g-mx-5--lg g-mx-5--xl {{Request::routeIs('w.appointment') ? 'active' : ''}}">
+            <li class="nav-item g-mx-5--lg g-mx-5--xl {{Request::routeIs('w.appointment') ? 'active' : ''}}">
               <a href="{{route('w.appointment')}}" class="nav-link">
                 <div class="g-py-2 g-px-0 nav-item-child">Doctors</div>
-                <div class="header-menu-summary">Book appointment</div>
+                {{-- <div class="header-menu-summary">Book appointment</div> --}}
               </a>
             </li>
             {{-- @guest --}}
             @if (!Auth::guard('web')->check() && !Auth::guard('extra_user')->check())
-            <li class="nav-item nav-item-hover g-mx-5--lg g-mx-5--xl {{Request::routeIs('register') ? 'active' : ''}}">
+            <li class="nav-item g-mx-5--lg g-mx-5--xl {{Request::routeIs('register') ? 'active' : ''}}">
               <a href="{{route('register')}}" class="nav-link">
                 <div class="g-py-2 g-px-0 nav-item-child">Get Listed</div>
-                <div class="header-menu-summary">List your practice</div>
+                {{-- <div class="header-menu-summary">List your practice</div> --}}
               </a>
             </li>
             {{-- @endguest --}}
@@ -62,13 +62,14 @@
             @endphp
             @if (!Auth::guard('web')->check() && !Auth::guard('extra_user')->check())
 
-              <div class="col-auto g-px-5 g-pt-5 g-mt-10">
+              <div class="col-auto g-px-40 g-pt-5 g-mt-10 text-center ">
+               
+                  <a href="{{ route('login') }}"class="btn btn-xl u-btn-primary text-uppercase g-font-weight-600 g-font-size-12 g-rounded-50 u-block-hover u-block-hover__additional--jump u-shadow-v21"><i class="icon-science-033 u-line-icon-pro"></i> Doctor Login</a>&nbsp;&nbsp;
 
-                  <a href="{{ route('login') }}"class="btn btn-sm u-btn-outline-primary"> Doctor Login</a>&nbsp;&nbsp;
-
-                  <a href="{{ route('patient.login') }}"class="btn btn-sm u-btn-outline-primary"> Patient Login</a>
+                  <a href="{{ route('patient.login') }}"class="btn btn-xl u-btn-teal text-uppercase g-font-weight-600 g-font-size-12 g-rounded-50 u-block-hover u-block-hover__additional--jump u-shadow-v21"><i class="icon-user"></i> Patient Login</a>
               </div>
             @else
+           
             <div class="dropdown g-mb-10 g-mb-0--md">
               <span class="d-block g-color-primary--hover g-cursor-pointer g-mr-minus-5 g-pa-5 g-pt-12"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="font-size: 15px;margin-top: 6px;">

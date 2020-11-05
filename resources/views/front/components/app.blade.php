@@ -3,7 +3,8 @@
 
 <head>
   <!-- Title -->
-  <title>@yield('title') - {{ config('app.name') }}</title>
+  {{-- <title>@yield('title') - {{ config('app.name') }} </title> --}}
+  <title>Appointment | Merohealthcare</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
