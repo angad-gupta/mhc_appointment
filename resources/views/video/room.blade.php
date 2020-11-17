@@ -164,7 +164,7 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
             const div = document.createElement('div');
             div.id = participant.sid;
             if (user == "local") {
-                div.setAttribute("style", "float: left; margin: 10px;");
+                div.setAttribute("style", " margin: 0px;");
 
                 participant.tracks.forEach(function (track) {
                     trackAdded(div, track, user);
@@ -177,7 +177,7 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
 
                 document.getElementById('media-div').appendChild(div);
             } else if (user == "remote") {
-                div.setAttribute("style", "float: left;");
+                div.setAttribute("style", "");
 
                 participant.tracks.forEach(function (track) {
                     trackAdded(div, track, user);
@@ -206,9 +206,9 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
            var video = div.getElementsByTagName("video")[0];
            if (video) {
                if(user == "local") {
-                    video.setAttribute("style", "margin-left: 90%; margin-top: -19%; max-width: 200px; border: 2px solid #999;border-radius: 10px;");
+                    video.setAttribute("style", "margin-left: 5px;position:absolute; z-index:10;margin-top: 5px; max-width: 150px; border: 0px solid #999;border-radius: 10px;");
                } else if (user == "remote") {
-                    video.setAttribute("style", "margin-left: 50%; width: 600px; border: 2px solid #999;border-radius: 10px;");
+                    video.setAttribute("style", "margin-left: 0%; width: 100%; height:100%; border: 0px solid #999;border-radius: 10px;background:black;");
                }
            }
         }
@@ -238,8 +238,12 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
             roomObj.localParticipant.videoTracks.forEach(videoTrack => {
                 if (videoTrack.isEnabled == true) {
                     videoTrack.disable();
+                    $('.fa-eye-slash').removeClass('hidden');
+                    $('.fa-video-camera').addClass('hidden');
                 } else {
                     videoTrack.enable();
+                    $('.fa-eye-slash').addClass('hidden');
+                    $('.fa-video-camera').removeClass('hidden');
                 }
             });
         }
@@ -295,23 +299,36 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
 </div> --}}
     {{-- {{ dd(auth()->user()->role) }} --}}
     
-    <div class="content" id="videoCall">
-        <div class="row">
-            <a href="http://localhost:8000" class="navbar-brand">
+    <div class="content" id="videoCall" style="scroll-margin: initial;overflow-y: scroll;">
+        <div class="container">
+            <a href="#" class="">
                 <img src="https://www.merohealthcare.com/assets/images/1592375295logo.jpg" height="60" width="100" alt="Unify Logo">
             </a>
+      
         </div>
-        <div class="row">            
+        <div class="row">     
+            <div class="col-md-12" style="margin-top: 0%; text-align:left; ">
+                <div id="media-div" style="">
+                    {{-- your video --}}
+                </div>
+            </div>       
             @if (auth('extra_user')->check())
             <div style="height: 80%" id="remote-media-div">
                 {{-- remote video --}}
             </div>
             @elseif($auth_user->role == 2)
-            <div class="col-md-6" id="remote-media-div" style="height: 80%">               
+            <div class="col-md-12" id="remote-media-div" style="height: 80%">               
                 {{-- remote video --}}
             </div>
-            <div class="col-md-6" style="height: 80%">                
-                <div class="box-body" style="width: 60%; float: right;">
+
+            <div class="col-md-2" style="margin-top: 5%">
+                <div id="media-div">
+                    {{-- your video --}}
+                </div>
+            </div>
+
+            <div class="col-md-8" style="">                
+                <div class="box-body" style="width: 100%;background:#f1f1f1;border-radius:10px;margin-top:10px;">
 
                     @include('operations.patient.patient-card-small', ['appointment'=>$appointment])
         
@@ -326,32 +343,30 @@ $auth_user = auth('extra_user')->check() ? auth('extra_user')->user() : auth()->
                                 <textarea name="note" cols="30" rows="4" required minlength="10"
                                           class="form-control html-editor"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success">{{ __('actions.submit') }}</button>
+                            <button type="submit" class="btn btn-success pull-right">{{ __('actions.submit') }}</button>
                         </div>
         
                     </form>
                 </div>
             </div>
+         
             @endif
         </div>
         <div class="row">
-            <div class="col-md-8">
-                <div class="controls" style="margin-left: 60%;">
+            <div class="col-md-12">
+                <div class="controls" style="text-align:center;padding:10px;">
                     <button class="call-video-off" id="call-video-off"
-                        style="font-size:48px; background-color: grey;"><i class="fa fa-video-camera"
-                            aria-hidden="true"></i></button>
-                    <button class="call-mute" id="call-mute" style="font-size:48px; background-color: grey;"><i
-                            class="fa fa-microphone-slash hidden" aria-hidden="true"></i><i class="fa fa-microphone"
-                            aria-hidden="true"></i></button>
+                        style="font-size:48px; background-color: #2385aa;">
+                        <i class="fa fa-eye-slash hidden" aria-hidden="true"></i>
+                        <i class="fa fa-video-camera" aria-hidden="true"></i></button>
+                    <button class="call-mute" id="call-mute" style="font-size:48px; background-color: green;">
+                        <i class="fa fa-microphone-slash hidden" aria-hidden="true"></i>
+                        <i class="fa fa-microphone" aria-hidden="true"></i></button>
                     <button class="call-end" room-name="{{ $appointment->search_id }}" id="end_call" style="font-size:48px; background-color: #f00;"><i
                             class="fa fa-phone" aria-hidden="true"></i></button>
                 </div>
             </div>
-            <div class="col-md-4" style="margin-top: -5%">
-                <div id="media-div">
-                    {{-- your video --}}
-                </div>
-            </div>
+          
         </div>
     </div>
 

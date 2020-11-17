@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="{{ url('/') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>M</b>H</span>
+        <span class="logo-mini"><b>M</b>A</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Mero </b>Health</span>
+        <span class="logo-lg"><b>MHC</b> Appointment</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -57,7 +57,7 @@
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">{{ $recent_queries->count() }}</span>
+                        <span class="label label-danger" style="border-radius: 10px;">{{ $recent_queries->count() }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">You have {{ $recent_queries->count() }} messages</li>

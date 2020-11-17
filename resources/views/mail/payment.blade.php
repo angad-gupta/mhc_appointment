@@ -71,8 +71,8 @@
             <th>#</th>
             <th>{{ __('doctor.doctor') }}</th>
             <th>{{ __('appointment.appointment') }} {{ __('schedule.date') }}</th>
-            <th>{{ __('mail.invoice.consultancy_fees') }} ({{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : '$' }})</th>
-            <th>{{ __('mail.invoice.total') }} ({{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : '$' }})</th>
+            <th>{{ __('mail.invoice.consultancy_fees') }} ({{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : 'Rs' }})</th>
+            <th>{{ __('mail.invoice.total') }} ({{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : 'Rs' }})</th>
         </tr>
         </thead>
         <tbody>
@@ -89,12 +89,12 @@
             <tr>
                 <td colspan="4" align="right">{{ __('mail.invoice.total') }}</td>
                 <td>
-                    <b>{{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : '$' }} {{ number_format($payment->payment_amount, 2) }} </b>
+                    <b>{{ is_object($invoice_setting) ? $invoice_setting->currency_symbol : 'Rs' }} {{ number_format($payment->payment_amount, 2) }} </b>
                 </td>
             </tr>
             <tr>
                 <td colspan="5">
-                    <p style="text-transform: capitalize;">{{ number_to_word($payment->payment_amount) }} {{ is_object($invoice_setting) ? $invoice_setting->currency_name : 'dollar' }}
+                    <p style="text-transform: capitalize;">{{ number_to_word($payment->payment_amount) }} {{ is_object($invoice_setting) ? $invoice_setting->currency_name : 'Rupees' }}
                         {{ __('mail.invoice.only') }} </p>
                 </td>
             </tr>
