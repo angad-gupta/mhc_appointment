@@ -16,17 +16,20 @@ class PatientOnlyApi
      */
     public function handle($request, Closure $next)
     {
-      
         $client = new \GuzzleHttp\Client();
 
-        $res = $client->request('GET', env('USER_API_URL'), [
+        try{
+        $res = $client->request('GET', env('USER_API_URL','https://www.merohealthcare.com/api/user/'), [
                      'headers' => [
                          'Authorization'=>'Bearer '.$request->bearerToken()
                     ]
             ]
         );
-       
-        
+        }catch(\Exception $e){
+            abort(403);
+        }
+
+
         $statusCode = $res->getStatusCode();
         $responseBody=$res->getBody();
         if($statusCode != 200){
@@ -58,7 +61,8 @@ class PatientOnlyApi
         $request->setUserResolver(function () use ($user) {
             return $user;
         });
-        
+
         return $next($request);
     }
 }
+

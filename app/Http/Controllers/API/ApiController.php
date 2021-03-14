@@ -337,6 +337,7 @@ class ApiController extends Controller
         $appointment->appointment_type = "video";        
         $appointment->fill($request->all());
         $appointment->status = 1;
+    
         if ($appointment->save()) {
             return $appointment;
         }

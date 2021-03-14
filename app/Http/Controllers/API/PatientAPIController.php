@@ -39,7 +39,7 @@ class PatientAPIController extends Controller
      */
     public function appointment(Request $request)
     {
-        $appointment = Appointment::where('patient_id',$request->user()->patient->id)->where('id',decrypt($request->id))->first();
+        $appointment = Appointment::where('patient_id',$request->user()->patient->id)->where('id',$request->id)->first();
         return response()->json($appointment);
     }
 
