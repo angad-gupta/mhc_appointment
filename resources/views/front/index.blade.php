@@ -9,7 +9,7 @@
 	<!-- Parallax Image -->
 	<div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_4--after" style="height: 140%; background-image: url(https://www.clinicone.com.np/wp-content/uploads/2020/08/Untitled-design.png);"></div>
 	<!-- End Parallax Image -->
-  
+
 	<div class="container text-center g-color-white g-py-200--md g-py-80">
 	  <h2 class="text-uppercase g-font-weight-700 g-mb-20" style=" text-shadow: 1px 6px 11px black;">Introducing Video Consultations</h2>
   
@@ -20,6 +20,7 @@
 	  <a href="{{route('specialities')}}" class="btn btn-xl u-btn-pink text-uppercase g-font-weight-600 g-font-size-12 g-rounded-50 g-mb-15 u-block-hover u-block-hover__additional--jump u-shadow-v21"><i class="icon-science-032 u-line-icon-pro"></i> Specialities</a>
 	</div>
   </section>
+
 
 {{-- <section class="g-py-30 g-mb-50">
 	<div class="container">

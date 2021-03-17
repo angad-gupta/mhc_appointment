@@ -9,7 +9,7 @@
         You have a new appointment, please check your account for more details.
 
         <div style="text-align:center;margin:20px">
-            <a href="{{ route('appointment.show',['id'=> encrypt($appointment->id)]) }}" style="background-color:#3eaa23;color:#ffffff;display:inline-block;font-family:cursive;text-transform: uppercase;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;border-radius:30px;">View Appointmemt</a>
+            <a href="{{ route('appointment.show',['id'=> encrypt($appointment->id)]) }}" style="background-color:#3eaa23;color:#ffffff;display:inline-block;font-size:14px;font-weight:regular;line-height:37px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;">View Appointment</a>
         </div>
     </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WebAppointmentRequest;
+use App\Http\Requests\AppAppointmentRequest;
 use App\Http\Resources\DoctorResource;
 use App\Http\Resources\DoctorsCollection;
 use App\Http\Resources\SpecialitiesCollection;
@@ -62,6 +63,7 @@ class ApiController extends Controller
             } catch (\Exception $ex) {
         }   
             $doctor = Doctor::where('slug', $slug)->first();
+            
             $date = Carbon::today();
             $schedule = Schedule::where('day', $day)->where('doctor_id', $doctor->id)->with('scheduleDetails')->first();
             $morning = [];
@@ -116,8 +118,11 @@ class ApiController extends Controller
         $appointment['morning'] = $morning;
         $appointment['evening'] = $evening;
         $appointment['noon'] = $noon;
+        $doctor->encrypted_id = $doctor->encrypted_id;
+    
         $data['doctor'] = DoctorResource::make($doctor);
         $data['appointments'] = $appointment;
+       
         return response()->json($data,200); 
     }
 
@@ -284,7 +289,7 @@ class ApiController extends Controller
         }
     }
 
-    public function PayNow(WebAppointmentRequest $request)
+    public function PayNow(Request $request)
     {
         $appointment = null;
         $appointment_check = Appointment::where('status',3)->where('schedule_date',$request->get('date'))->where('schedule_time',$request->get('schedule_time'))->first();

@@ -18,6 +18,7 @@ class PatientOnlyApi
     {
         $client = new \GuzzleHttp\Client();
 
+
         try{
         $res = $client->request('GET', env('USER_API_URL','https://www.merohealthcare.com/api/user/'), [
                      'headers' => [

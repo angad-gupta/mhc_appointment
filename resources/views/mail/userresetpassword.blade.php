@@ -9,7 +9,7 @@
         You are receiving this email because we received a password reset request for your user account.
 
         <div style="text-align:center;margin:20px">
-            <a href="{{ route('password.reset', $token) }}" style="background-color:#3eaa23;color:#ffffff;display:inline-block;font-family:cursive;text-transform: uppercase;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;border-radius:30px;">Reset Password</a>
+            <a href="{{ route('password.reset', $token) }}" style="background-color:#3eaa23;color:#ffffff;display:inline-block;font-size:14px;font-weight:regular;line-height:37px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;">Reset Password</a>
         </div>
         If you did not request a password reset, no further action is required.
     </div>

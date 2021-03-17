@@ -31,7 +31,7 @@
                   class="g-brd-primary--checked g-bg-primary-opacity-0_2--checked g-brd-around g-brd-gray-light-v2 g-rounded-5">
                   <div class="media g-pa-12">
                     <div class="media-body align-self-center g-color-lightred">
-                      <img src="https://myngch.com/frontend/assets/images/esewa_logo.png"
+                      <img src="https://otsnepal.com/wp-content/uploads/2020/05/unnamed.png"
                         class="g-font-size-30 align-self-center mx-auto" width="60">
                     </div>
                   </div>

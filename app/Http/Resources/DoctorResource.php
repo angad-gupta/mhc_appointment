@@ -39,7 +39,8 @@ class DoctorResource extends JsonResource
             'services' => $this->services,
             'nmc_number' => $this->nmc_number,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at
+            'updated_at' => $this->updated_at,
+            'encrypted_id' => $this->encrypted_id,
          ];
     }
 }
